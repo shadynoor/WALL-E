@@ -9,7 +9,7 @@ def drawCir(r=0.5 , xc=0 , yc=0):
 
     glBegin(GL_POLYGON)
     for c in np.arange (0,6,0.1):
-        glColor3f(0,0,.3)
+        glColor3f(1,1,1)
         x = r * cos(c)
         y = r * sin(c)
         glVertex(x+xc,y+yc)
@@ -191,23 +191,10 @@ def draw():
     glVertex(-.1,-.1)
     glEnd()
 
-    glBegin(GL_LINE_STRIP)
-    glVertex(.1, -.05)
-    glVertex(.15,-.05)
-    glVertex(.15, -.1)
-    glEnd()
-
-    glBegin(GL_LINE_STRIP)
-    glVertex(-.1, -.05)
-    glVertex(-.15,-.05)
-    glVertex(-.15, -.1)
-    glEnd()
-
-    drawCir(.012, .12, -.07)
-    drawCir(.012, -.12, -.07)
 
 
     glBegin(GL_LINES)
+    glColor3f(0,0,.3)
     glVertex(.2,.3)
     glVertex(-.2,.3)
     glEnd()
@@ -307,6 +294,6 @@ def draw():
 glutInit()
 glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB)
 glutInitWindowSize(500, 500)
-glutCreateWindow(b"WALL-E")
+glutCreateWindow(b"Tea pot Program")
 glutDisplayFunc(draw)
 glutMainLoop()
