@@ -83,8 +83,9 @@ def draw():
     glEnd()
 
 
-    drawEli(.17, .1, .625)
-    drawEli(.17, -.1, .625)
+
+    drawEli(.12, .1, .625)
+    drawEli(.12, -.1, .625)
     drawCir(.02,.1,.625)
     drawCir(.02,-.1,.625)
 
@@ -121,6 +122,42 @@ def draw():
     glEnd()
 
     #Morb3 el regl
+
+    glBegin(GL_LINES)
+    glColor3f(0,0,.3)
+    glVertex(.25,.08)
+    glVertex(.35,.08)
+    glVertex(.25,.04)
+    glVertex(.35,.04)
+    glVertex(.25,0)
+    glVertex(.35,0)
+    glVertex(.25,-.04)
+    glVertex(.35,-.04)
+    glVertex(.25,-.08)
+    glVertex(.35,-.08)
+    glVertex(.25,-.12)
+    glVertex(.35,-.12)
+    glVertex(.25,-.16)
+    glVertex(.35,-.16)
+    glEnd()
+
+    glBegin(GL_LINES)
+    glColor3f(0,0,.3)
+    glVertex(-.25,.08)
+    glVertex(-.35,.08)
+    glVertex(-.25,.04)
+    glVertex(-.35,.04)
+    glVertex(-.25,0)
+    glVertex(-.35,0)
+    glVertex(-.25,-.04)
+    glVertex(-.35,-.04)
+    glVertex(-.25,-.08)
+    glVertex(-.35,-.08)
+    glVertex(-.25,-.12)
+    glVertex(-.35,-.12)
+    glVertex(-.25,-.16)
+    glVertex(-.35,-.16)
+    glEnd()
 
 
     glBegin(GL_LINES)
@@ -270,6 +307,6 @@ def draw():
 glutInit()
 glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB)
 glutInitWindowSize(500, 500)
-glutCreateWindow(b"Tea pot Program")
+glutCreateWindow(b"WALL-E")
 glutDisplayFunc(draw)
 glutMainLoop()
